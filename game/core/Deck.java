@@ -110,4 +110,12 @@ public class Deck {
         }
 */
     }
+
+    public static Card drawCard(){
+        double r = Math.random()*24;
+        long y = Math.round(r);
+        int x = (int) y;
+        return null;
+    }
+
 }

@@ -1,1 +1,1 @@
-# Hearthwatch
+# Hearthwatch - TCG project to learn java
