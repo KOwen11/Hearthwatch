@@ -18,7 +18,11 @@ public class Player {
     public static void setHp(){
         hp = 30;
     }
-
+    
+    public static Card getCard(Card x){
+        return playerDeckList.get(x);
+    }
+    
     public static List<Card> getPlayerDeckList(){
         List<Card> x = playerDeck.getCards();
         return x;
