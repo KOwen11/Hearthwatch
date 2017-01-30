@@ -1,6 +1,8 @@
 /**
  * Created by Kevin on 1/28/2017.
  */
+
+//redundant class. need to remove.
 public class SpellCard {
 
     public static Card discordOrb;
