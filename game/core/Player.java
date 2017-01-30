@@ -9,15 +9,12 @@ import java.util.Arrays;
  * Created by Kevin on 1/28/2017.
  */
 public class Player {
-    private static List<Card> playerDeckList;
     private static Deck playerDeck;
     private static Hand playerHand;
     private static String name;
     private static int hp;
     
-    public static void setPlayerDeckList(){
-        playerDeckList = playerDeck.getCards();
-    }
+
     
     public static void setHp(){
         hp = 30;
@@ -25,11 +22,6 @@ public class Player {
     
     public static Card getCard(Card x){
         return playerDeck.getCard(x);
-    }
-    
-    public static List<Card> getPlayerDeckList(){
-        List<Card> x = playerDeck.getCards();
-        return x;
     }
 
     public static void reduceHp(int x){
@@ -69,9 +61,9 @@ public class Player {
         Deck.removeFromDeck(x);
         return x.name;
     }
-
-    public static Player newPlayer(){
-        Player x = new Player();
+        
+    public static List<Card> getPlayerDeckList(){
+        List<Card> x = playerDeck.getCards();
         return x;
     }
 }
