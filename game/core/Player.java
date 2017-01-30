@@ -24,7 +24,7 @@ public class Player {
     }
     
     public static Card getCard(Card x){
-        return playerDeckList.get(x);
+        return playerDeck.getCard(x);
     }
     
     public static List<Card> getPlayerDeckList(){
