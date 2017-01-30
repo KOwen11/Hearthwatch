@@ -1,21 +1,77 @@
+import java.util.*;
+
 /**
  * Created by Kevin on 1/28/2017.
  */
 public class Deck {
-    private static Card[] aDeck;
-    private static Card[] bDeck;
+    private static List<Card> cards;
+    private static int maxDeckSize;
+    private static int deckSize;
 
-    static {
-        aDeck = newDeck();
-        bDeck = newDeck();
+
+    public static int getMaxDeckSize() {
+        return maxDeckSize;
     }
 
+    public static int getDeckSize(){
+        return deckSize;
+    }
 
+    public static List<Card> getCards(){
+        return cards;
+    }
 
-    public static Card[] newDeck(){
+    public static void setCards(){
+
+        cards.add(Card.newTracer());
+        cards.add(Card.newTracer());
+        cards.add(Card.newSoldier());
+        cards.add(Card.newSoldier());
+        cards.add(Card.newReaper());
+        cards.add(Card.newReaper());
+        cards.add(Card.newMei());
+        cards.add(Card.newMei());
+        cards.add(Card.newReinhardt());
+        cards.add(Card.newReinhardt());
+        cards.add(Card.newWinston());
+        cards.add(Card.newWinston());
+        cards.add(Card.newRoadhog());
+        cards.add(Card.newRoadhog());
+        cards.add(Card.newDva());
+        cards.add(Card.newDva());
+        cards.add(Card.newMercy());
+        cards.add(Card.newMercy());
+        cards.add(Card.newZenyatta());
+        cards.add(Card.newZenyatta());
+        cards.add(Card.newPharah());
+        cards.add(Card.newPharah());
+        cards.add(Card.newLucio());
+        cards.add(Card.newLucio());
+        cards.add(Card.newAna());
+        cards.add(Card.newAna());
+        cards.add(Card.newGenji());
+        cards.add(Card.newGenji());
+        cards.add(Card.newTracer());
+        cards.add(Card.newSoldier());
+    }
+
+    public static void removeFromDeck(Card x){
+        cards.add(x);
+    }
+
+    public static void addToDeck(Card x){
+        cards.remove(x);
+    }
+
+    public static void shuffle(List<Card> x){
+        long seed = System.nanoTime();
+        Collections.shuffle(x, new Random(seed));
+    }
+/*
+      public static Card[] newRandDeck(){
         Card[] deck = new Card[20];
-        int z = 0;
-        while(z < 20){
+            int z = 0;
+            while(z < 20){
             double r = Math.random()*24;
             long y = Math.round(r);
             int x = (int) y;
@@ -97,7 +153,7 @@ public class Deck {
             }
         }
         return deck;
-/*
+
         int cardTest = 0;
         while(cardTest < 20){
             System.out.println("Slot " + (cardTest+1) + ":");
@@ -108,14 +164,10 @@ public class Deck {
             System.out.println();
             cardTest = cardTest + 1;
         }
-*/
-    }
 
-    public static Card drawCard(){
-        double r = Math.random()*24;
-        long y = Math.round(r);
-        int x = (int) y;
-        return null;
     }
+*/
+
+
 
 }

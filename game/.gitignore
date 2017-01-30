@@ -10,3 +10,7 @@
 
 # cloud9 settings
 .c9
+
+# image files
+.png
+.psd
