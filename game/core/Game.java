@@ -18,6 +18,8 @@ public class Game {
         Player players = new Player();
         players.setHp();
         players.setName("testName");
+        players.setPlayerDeck();
+        players.setPlayerDeckList();
         System.out.println(players.getName());
 
 
@@ -25,7 +27,8 @@ public class Game {
         System.out.println(players.getName() + "'s pre-shuffled deck: ");
         int p1i = 0;
         while (p1i < 30){
-            Card testVar = players.getPlayerDeckList().get(p1i);
+            Card testCard = players.getCard(p1i);
+            String testVar = testCard.name;
             System.out.println(testVar);
             p1i = p1i + 1;
         }
