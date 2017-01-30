@@ -14,7 +14,11 @@ public class Player {
     private static Hand playerHand;
     private static String name;
     private static int hp;
-
+    
+    public static void setPlayerDeckList(){
+        playerDeckList = playerDeck.getCards();
+    }
+    
     public static void setHp(){
         hp = 30;
     }
