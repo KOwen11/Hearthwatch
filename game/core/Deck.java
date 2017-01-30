@@ -16,7 +16,12 @@ public class Deck {
     public static int getDeckSize(){
         return deckSize;
     }
-
+    
+    public static Card getCard(Card x){
+        Card y = cards.get(x);
+        return y;
+    }
+    
     public static List<Card> getCards(){
         return cards;
     }
